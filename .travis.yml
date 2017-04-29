@@ -7,3 +7,14 @@ cache:
   directories:
     - node_modules
 
+notifications:
+  slack: merinoui:m6e1FKQXkW2HDuc6K5yENvwY
+
+before_install:
+  - "yarn global add eslint"
+
+install:
+  - NODE_ENV=development yarn install
+
+script:
+  - gulp lint
