@@ -1,0 +1,11 @@
+{
+  "name": "grassmudhorseui",
+  "version": "1.0.0",
+  "description": "Framework agnostic UI component collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jason Shin <visualbbasic@gmail.com>",
+  "license": "ISC"
+}
