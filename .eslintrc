@@ -3,5 +3,8 @@
   "rules": {
     "semi": ["error", "always"]
   },
+  "globals": {
+    "HTMLElement": true
+  },
   "plugins": ["security"]
 }
