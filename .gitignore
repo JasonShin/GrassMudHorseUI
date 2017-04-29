@@ -1,0 +1,2 @@
+# ignore pretty much any node_modules folder in any folder depth
+/node_modules
