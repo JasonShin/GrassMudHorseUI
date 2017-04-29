@@ -1,11 +1,16 @@
 import gulp from 'gulp';
-// import BrowserSync from 'browser-sync';
+import BrowserSync from 'browser-sync';
 // import sass from 'gulp-sass';
 import eslint from 'gulp-eslint';
 
-// const browserSync = BrowserSync.create();
+const browserSync = BrowserSync.create();
 
-gulp.task('serve', []);
+gulp.task('serve', [], () => {
+  browserSync.init({
+    server: './dist'
+  });
+  gulp.watch('dist/index.html').on('change', browserSync.reload);
+});
 
 gulp.task('babel', () => {
 });
