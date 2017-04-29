@@ -15,7 +15,7 @@ gulp.task('sass', () => {
 
 gulp.task('lint', () => {
   return gulp.src(['**/*.js'], '!node_modules/**')
-    .pipe(eslint())
+    .pipe(eslint('./.eslintrc'))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
