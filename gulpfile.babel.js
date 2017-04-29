@@ -1,9 +1,9 @@
 import gulp from 'gulp';
-import BrowserSync from 'browser-sync';
-import sass from 'gulp-sass';
+// import BrowserSync from 'browser-sync';
+// import sass from 'gulp-sass';
 import eslint from 'gulp-eslint';
 
-const browserSync = BrowserSync.create();
+// const browserSync = BrowserSync.create();
 
 gulp.task('serve', []);
 
