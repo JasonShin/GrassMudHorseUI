@@ -7,9 +7,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jason Shin <visualbbasic@gmail.com>",
+  "contributors": [
+    {
+      "name": "Steven Zhang",
+      "email": "stevenzhang717@gmail.com"
+    }
+  ],
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "cross-env": "^4.0.0",
+    "cypress": "^0.10.1",
+    "gulp": "^3.9.1",
+    "jest": "^19.0.2"
   },
   "dependencies": {
     "eslint": "^3.19.0",
