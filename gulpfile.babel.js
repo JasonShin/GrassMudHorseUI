@@ -27,12 +27,13 @@ gulp.task('core', (sync = true) => {
     .pipe(rollup({
       sourceMap: 'inline',
       entry: './core/index.js',
+      allowRealFiles: true,
       plugins: [
-        nodeResolve(),
+        nodeResolve({ module: true }),
         commonjs({
           // non-CommonJS modules will be ignored, but you can also
           // specifically include/exclude files
-          include: 'node_modules/**',  // Default: undefined
+          include: ['node_modules/**'],  // Default: undefined
           exclude: undefined,  // Default: undefined
 
           // search for files other than .js files (must already
@@ -47,7 +48,9 @@ gulp.task('core', (sync = true) => {
 
           // explicitly specify unresolvable named exports
           // (see below for more details)
-          namedExports: undefined,  // Default: undefined
+          namedExports: {
+            'node_modules/skatejs/dist/index.js': ['Component', 'h']
+          },
 
           // sometimes you have to leave require statements
           // unconverted. Pass an array containing the IDs
@@ -57,7 +60,8 @@ gulp.task('core', (sync = true) => {
         }),
         babel({
           presets: ['es2016'],
-          babelrc: false
+          babelrc: false,
+          plugins: ['transform-react-jsx']
         })
       ]
     }))

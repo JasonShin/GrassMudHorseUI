@@ -1,3 +1,3 @@
-/**
- * Created by Shin on 29/04/2017.
- */
+import Input from './Input';
+
+export default Input;
