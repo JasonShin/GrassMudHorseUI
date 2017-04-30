@@ -1,12 +1,9 @@
-import skatejs from 'skatejs';
+import Base from '../Base';
 
-
-
-class Input extends Component {
-  renderCallback () {
-    return (
-      <span>testing bro!</span>
-    );
+class Input extends Base {
+  constructor () {
+    super();
+    console.log('yo');
   }
 }
 
