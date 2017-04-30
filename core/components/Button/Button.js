@@ -6,9 +6,13 @@ class Button extends Base {
     // creates a shadow root
     const shadow = this.attachShadow({mode: 'open'});
     // Create a standard img element and set it's attributes.
-    const span = document.createElement('button');
-    shadow.appendChild(span);
+    const button = document.createElement('button');
+    button.innerText = 'BUTTOlol';
+    shadow.appendChild(button);
+    this.getDefaultStyle();
   }
 }
+
+customElements.define('mui-button', Button);
 
 export default Button;
