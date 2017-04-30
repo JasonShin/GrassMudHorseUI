@@ -6,19 +6,21 @@ import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import sourcemaps from 'gulp-sourcemaps';
 import eslint from 'gulp-eslint';
-import browserify from 'gulp-browserify';
 
 const browserSync = BrowserSync.create();
+
+const pathCore = './src/**/*.js';
 
 gulp.task('serve', ['core'], () => {
   browserSync.init({
     server: './dist'
   });
+  gulp.watch(pathCore, ['core']);
   gulp.watch('dist/index.html').on('change', browserSync.reload);
 });
 
-gulp.task('core', () => {
-  gulp.src('./src/**/*.js')
+gulp.task('core', (sync = true) => {
+  gulp.src(pathCore)
     .pipe(sourcemaps.init())
     .pipe(rollup({
       sourceMap: 'inline',
@@ -58,15 +60,8 @@ gulp.task('core', () => {
       ]
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./dist'));
-});
-
-gulp.task('babel', () => {
-  gulp.src('./src/**/*.js')
-    .pipe(browserify({
-      transform: ['babelify']
-    }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist'))
+    .pipe(sync ? browserSync.stream() : null);
 });
 
 gulp.task('sass', () => {

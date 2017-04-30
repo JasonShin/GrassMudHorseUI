@@ -9,7 +9,7 @@ class Button extends Base {
     const span = document.createElement('span');
     span.innerHTML = `
       <div>
-       yoyoyo
+       yoyoyoaaxxxzzzzzcccxxccZXCZXCzzzcccvvvZZ
       </div>
     `;
     shadow.appendChild(span);
