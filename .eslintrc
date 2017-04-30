@@ -4,7 +4,8 @@
     "semi": ["error", "always"]
   },
   "globals": {
-    "HTMLElement": true
+    "HTMLElement": true,
+    "customElements": true
   },
   "plugins": ["security"]
 }
