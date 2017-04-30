@@ -4,28 +4,27 @@ import rollup from 'gulp-rollup';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
+import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import eslint from 'gulp-eslint';
 
 const browserSync = BrowserSync.create();
 
-const pathCore = './core/**/*.js';
-const pathCoreJs = './core/index.js';
-
-gulp.task('serve', ['core'], () => {
+gulp.task('serve', ['core', 'sass'], () => {
   browserSync.init({
     server: './dist'
   });
-  gulp.watch(pathCore, ['core']);
+  gulp.watch('./core/**/*.js', ['core']);
+  gulp.watch('./core/**/*.scss', ['sass']);
   gulp.watch('dist/index.html').on('change', browserSync.reload);
 });
 
 gulp.task('core', (sync = true) => {
-  gulp.src(pathCore)
+  gulp.src('./core/**/*.js')
     .pipe(sourcemaps.init())
     .pipe(rollup({
       sourceMap: 'inline',
-      entry: pathCoreJs,
+      entry: './core/index.js',
       plugins: [
         nodeResolve(),
         commonjs({
@@ -65,11 +64,15 @@ gulp.task('core', (sync = true) => {
     .pipe(sync ? browserSync.stream() : null);
 });
 
-gulp.task('sass', () => {
+gulp.task('sass', (sync = true) => {
+  gulp.src('./core/styles/**/style.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('./dist/styles'))
+    .pipe(sync ? browserSync.stream() : null);
 });
 
 gulp.task('lint', () => {
-  gulp.src(['**/*.js', '!node_modules/**'])
+  gulp.src(['**/*.js', '!node_modules/**', '!core/polyfills/**/*.js'])
     .pipe(eslint({
       configFile: './.eslintrc',
       fix: true
