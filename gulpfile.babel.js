@@ -79,11 +79,11 @@ gulp.task('sass', (sync = true) => {
     .pipe(sync ? browserSync.stream() : null);
 });
 
-gulp.task('lint', () => {
-  gulp.src(['**/*.js', '!node_modules/**', '!core/polyfills/**/*.js'])
+gulp.task('lint:js', () => {
+  gulp.src(['core/**/*.js', '!core/polyfills/**'])
     .pipe(eslint({
       configFile: './.eslintrc',
-      fix: true
+      fix: false
     }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());

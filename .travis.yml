@@ -17,4 +17,4 @@ install:
   - NODE_ENV=development yarn install
 
 script:
-  - gulp lint
+  - gulp lint:js
