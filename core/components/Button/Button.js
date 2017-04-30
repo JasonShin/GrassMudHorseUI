@@ -6,12 +6,7 @@ class Button extends Base {
     // creates a shadow root
     const shadow = this.attachShadow({mode: 'open'});
     // Create a standard img element and set it's attributes.
-    const span = document.createElement('span');
-    span.innerHTML = `
-      <div>
-       yoyoyoaaxxxzzzzzcccxxccZXCZXCzzzcccvvvZZ lol
-      </div>
-    `;
+    const span = document.createElement('button');
     shadow.appendChild(span);
   }
 }

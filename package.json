@@ -4,6 +4,8 @@
   "description": "Framework agnostic UI component collection",
   "main": "index.js",
   "scripts": {
+    "dev": "cross-env NODE_ENV=development gulp serve",
+    "lint": "cross-env NODE_ENV=development gulp lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jason Shin <visualbbasic@gmail.com>",

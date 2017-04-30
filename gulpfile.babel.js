@@ -9,7 +9,8 @@ import eslint from 'gulp-eslint';
 
 const browserSync = BrowserSync.create();
 
-const pathCore = './src/**/*.js';
+const pathCore = './core/**/*.js';
+const pathCoreJs = './core/index.js';
 
 gulp.task('serve', ['core'], () => {
   browserSync.init({
@@ -24,7 +25,7 @@ gulp.task('core', (sync = true) => {
     .pipe(sourcemaps.init())
     .pipe(rollup({
       sourceMap: 'inline',
-      entry: './src/setup.js',
+      entry: pathCoreJs,
       plugins: [
         nodeResolve(),
         commonjs({
