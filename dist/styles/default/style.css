@@ -1,2 +1,5 @@
 mui-button {
-  border: 3px solid black; }
+  border: 3px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }

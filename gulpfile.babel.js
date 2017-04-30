@@ -5,6 +5,8 @@ import nodeResolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import sass from 'gulp-sass';
+import postcss from 'gulp-postcss';
+import rucksack from 'rucksack-css';
 import sourcemaps from 'gulp-sourcemaps';
 import eslint from 'gulp-eslint';
 
@@ -65,8 +67,14 @@ gulp.task('core', (sync = true) => {
 });
 
 gulp.task('sass', (sync = true) => {
+  const processors = [
+    rucksack({
+      autoprefixer: true
+    })
+  ];
   gulp.src('./core/styles/**/style.scss')
     .pipe(sass())
+    .pipe(postcss(processors))
     .pipe(gulp.dest('./dist/styles'))
     .pipe(sync ? browserSync.stream() : null);
 });
