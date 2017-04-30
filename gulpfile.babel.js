@@ -69,7 +69,10 @@ gulp.task('sass', () => {
 
 gulp.task('lint', () => {
   gulp.src(['**/*.js', '!node_modules/**'])
-    .pipe(eslint('./.eslintrc'))
+    .pipe(eslint({
+      configFile: './.eslintrc',
+      fix: true
+    }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
