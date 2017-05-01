@@ -1,10 +1,11 @@
 # jetbrain
-.idea
+/.idea
 
 # ignore pretty much any node_modules folder in any folder depth
 /node_modules
 
-.git
+# git ignore
+/.git
 
 # dist folder things
 /dist/styles
