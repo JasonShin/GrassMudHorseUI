@@ -1,3 +1,3 @@
-import Button from './Button';
+import MerinoButton from './Button';
 
-export default Button;
+export default MerinoButton;

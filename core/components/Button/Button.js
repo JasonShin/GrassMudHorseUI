@@ -1,18 +1,8 @@
-import Base from '../Base';
+var proto = Object.create(HTMLButtonElement.prototype);
 
-class Button extends Base {
-  constructor () {
-    super();
-    // creates a shadow root
-    const shadow = this.attachShadow({mode: 'open'});
-    // Create a standard img element and set it's attributes.
-    const button = document.createElement('button');
-    button.innerText = 'BUTTOlol';
-    shadow.appendChild(button);
-    this.getDefaultStyle();
-  }
-}
+var merinoButton = document.registerElement('merino-button', {
+  prototype: proto,
+  extends: 'button'
+});
 
-customElements.define('mui-button', Button);
-
-export default Button;
+export default merinoButton;
