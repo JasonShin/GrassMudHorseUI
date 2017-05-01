@@ -1,2 +1,2 @@
-import './WebComponents/Button';
-import './WebComponents/Input';
+import './components/Button';
+import './components/Input';

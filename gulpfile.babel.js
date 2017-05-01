@@ -76,7 +76,7 @@ gulp.task('sass', (sync = true) => {
       autoprefixer: true
     })
   ];
-  gulp.src('./core/styles/**/style.scss')
+  gulp.src('./core/css/**/style.scss')
     .pipe(sass())
     .pipe(postcss(processors))
     .pipe(gulp.dest('./dist/styles'))
