@@ -13,7 +13,7 @@ class Base extends getElementClass() {
     super();
   }
   getDefaultStyle () {
-    const defaultTheme = document.styleSheets;
+    const defaultTheme = document.styleSheets[0].rules || document.styleSheets[0].cssRules;
     console.log('default themes! ', defaultTheme);
   }
 }

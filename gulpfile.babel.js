@@ -48,9 +48,7 @@ gulp.task('core', (sync = true) => {
 
           // explicitly specify unresolvable named exports
           // (see below for more details)
-          namedExports: {
-            'node_modules/skatejs/dist/index.js': ['Component', 'h']
-          },
+          namedExports: undefined,
 
           // sometimes you have to leave require statements
           // unconverted. Pass an array containing the IDs
