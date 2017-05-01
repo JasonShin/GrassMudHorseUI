@@ -4,3 +4,8 @@
 # ignore pretty much any node_modules folder in any folder depth
 /node_modules
 
+.git
+
+# dist folder things
+/dist/styles
+/dist/index.js
