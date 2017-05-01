@@ -6,7 +6,8 @@
   },
   "globals": {
     "HTMLElement": true,
-    "customElements": true
+    "customElements": true,
+    "HTMLButtonElement": true
   },
   "plugins": ["security"]
 }

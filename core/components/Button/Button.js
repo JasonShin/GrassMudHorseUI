@@ -1,6 +1,6 @@
 var proto = Object.create(HTMLButtonElement.prototype);
 
-var merinoButton = document.registerElement('merino-button', {
+var merinoButton = document.registerElement('mui-button', {
   prototype: proto,
   extends: 'button'
 });

@@ -12,8 +12,9 @@ class Base extends getElementClass() {
   constructor () {
     super();
   }
-  getDefaultStyle () {
-    const defaultTheme = document.styleSheets[0].rules || document.styleSheets[0].cssRules;
+  getChildStyles (componentName) {
+    const rules = document.styleSheets[0].rules || document.styleSheets[0].cssRules;
+
     console.log('default themes! ', defaultTheme);
   }
 }
