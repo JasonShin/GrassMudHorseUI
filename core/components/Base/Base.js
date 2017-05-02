@@ -1,3 +1,7 @@
+/**
+ * Polyfill get element class
+ * @returns {*}
+ */
 function getElementClass () {
   if (typeof HTMLElement !== 'function') { // case of Safari
     const BaseElement = () => {};
@@ -9,6 +13,9 @@ function getElementClass () {
 }
 
 class Base extends getElementClass() {
+  /**
+   * Base constructor
+   */
   constructor () {
     super();
   }
