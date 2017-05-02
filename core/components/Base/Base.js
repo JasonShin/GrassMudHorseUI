@@ -1,3 +1,7 @@
+/**
+ * Polyfill get element class
+ * @returns {*}
+ */
 function getElementClass () {
   if (typeof HTMLElement !== 'function') { // case of Safari
     const BaseElement = () => {};
@@ -9,12 +13,11 @@ function getElementClass () {
 }
 
 class Base extends getElementClass() {
+  /**
+   * Base constructor
+   */
   constructor () {
     super();
-  }
-  getDefaultStyle () {
-    const defaultTheme = document.styleSheets[0].rules || document.styleSheets[0].cssRules;
-    console.log('default themes! ', defaultTheme);
   }
 }
 

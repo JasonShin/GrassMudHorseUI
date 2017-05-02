@@ -1,4 +1,40 @@
 mui-input {
-  border: 3px solid black;
+  display: flex;
+  flex-direction: row;
+  width: 200px;
   color: #34495e;
+}
+
+mui-input input {
+  width: 100%;
+  padding: 7px 19px;
+  font-size: 17px;
+  line-height: 1.471;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: 250ms ease-in-out-cubic;
+}
+
+/**
+ * Placeholder colouring
+ */
+mui-input input::placeholder {
+  color: #bdc3c7;
+}
+
+mui-input[data-type="inactive"] input {
+  border: 3px solid #bdc3c7;
+}
+
+mui-input[data-type="inactive"] input:focus {
+  border: 3px solid #2ecc71;
+}
+
+mui-input[data-type="success"] input {
+  border: 3px solid #2ecc71;
+}
+
+// General style disabling
+mui-input input:focus {
+  outline: none;
 }
