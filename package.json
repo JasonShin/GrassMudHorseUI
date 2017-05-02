@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development gulp serve",
-    "lint": "cross-env NODE_ENV=development gulp lint:js",
+    "lint:js": "cross-env NODE_ENV=development gulp lint:js",
     "test": "cross-env NODE_ENV=test gulp jest"
   },
   "author": "Jason Shin <visualbbasic@gmail.com>",
