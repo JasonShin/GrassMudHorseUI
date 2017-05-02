@@ -1,5 +1,10 @@
 import Base from '../Base';
 
+/**
+ * Props: {
+ *  placeholder: string, // placeholder string for input field
+ * }
+ */
 class Input extends Base {
   /**
    * Input constructor
