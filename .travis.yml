@@ -18,3 +18,4 @@ install:
 
 script:
   - gulp lint:js
+  - NODE_ENV=test gulp jest

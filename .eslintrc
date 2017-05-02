@@ -9,5 +9,8 @@
     "customElements": true,
     "HTMLButtonElement": true
   },
+  "env": {
+    "jest": true
+  },
   "plugins": ["security"]
 }

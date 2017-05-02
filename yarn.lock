@@ -2640,6 +2640,13 @@ gulp-eslint@^3.0.1:
     eslint "^3.0.0"
     gulp-util "^3.0.6"
 
+gulp-jest@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gulp-jest/-/gulp-jest-1.0.0.tgz#cc8803a60503b00de02c825243d5d02ab1d05c39"
+  dependencies:
+    gulp-util "^3.0.0"
+    through2 "^2.0.1"
+
 gulp-postcss@^6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/gulp-postcss/-/gulp-postcss-6.4.0.tgz#78a32e3c87aa6cdcec5ae1c905e196d478e8c5d5"
@@ -5910,7 +5917,7 @@ throttleit@~0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/throttleit/-/throttleit-0.0.2.tgz#cfedf88e60c00dd9697b61fdd2a8343a9b680eaf"
 
-through2@2.X, through2@^2.0.0, through2@^2.0.3:
+through2@2.X, through2@^2.0.0, through2@^2.0.1, through2@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.3.tgz#0004569b37c7c74ba39c43f3ced78d1ad94140be"
   dependencies:

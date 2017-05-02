@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development gulp serve",
     "lint": "cross-env NODE_ENV=development gulp lint:js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=test gulp jest"
   },
   "author": "Jason Shin <visualbbasic@gmail.com>",
   "contributors": [
@@ -40,6 +40,7 @@
     "gulp-eslint": "^3.0.1",
     "gulp-postcss": "^6.4.0",
     "gulp-replace": "^0.5.4",
+    "gulp-rollup": "^2.11.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "jest": "^19.0.2",
@@ -47,9 +48,10 @@
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "rucksack-css": "^0.9.1",
-    "gulp-rollup": "^2.11.0"
+    "rucksack-css": "^0.9.1"
   },
   "dependencies": {
+    "gulp-jest": "^1.0.0",
+    "jest-cli": "^19.0.2"
   }
 }
