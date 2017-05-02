@@ -1,3 +1,3 @@
-/**
- * Created by Shin on 2/05/2017.
- */
+import Switch from './Switch';
+
+export default Switch;

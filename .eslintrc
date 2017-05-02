@@ -8,7 +8,8 @@
     "HTMLElement": true,
     "customElements": true,
     "HTMLButtonElement": true,
-    "HTMLInputElement": true
+    "HTMLInputElement": true,
+    "DOMParser": true
   },
   "env": {
     "jest": true
