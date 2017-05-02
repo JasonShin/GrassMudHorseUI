@@ -1,6 +1,9 @@
 import Base from '../Base';
 
 class Input extends Base {
+  /**
+   * Input constructor
+   */
   constructor () {
     super();
     // Renders Input
@@ -32,6 +35,7 @@ class Input extends Base {
     this.appendChild(input);
   }
 }
+
 customElements.define('mui-input', Input);
 
 export default Input;

@@ -32,6 +32,12 @@ mui-input[data-type="inactive"] input:focus {
 
 mui-input[data-type="success"] input {
   border: 3px solid #2ecc71;
+  color: #2ecc71;
+}
+
+mui-input[data-type="error"] input {
+  border: 3px solid #e74c3c;
+  color: #e74c3c;
 }
 
 // General style disabling
