@@ -10,5 +10,8 @@
     "HTMLButtonElement": true,
     "HTMLInputElement": true
   },
+  "env": {
+    "jest": true
+  },
   "plugins": ["security"]
 }

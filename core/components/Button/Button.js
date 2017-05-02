@@ -1,10 +1,10 @@
 var proto = Object.create(HTMLButtonElement.prototype);
 
+var MerinoButton = document.registerElement('merino-button', {
 // TODO: Refactor it to have a div wrapper
 // TODO: Prefer const than var
-var merinoButton = document.registerElement('mui-button', {
   prototype: proto,
   extends: 'button'
 });
 
-export default merinoButton;
+export default MerinoButton;

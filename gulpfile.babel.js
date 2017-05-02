@@ -9,6 +9,7 @@ import postcss from 'gulp-postcss';
 import rucksack from 'rucksack-css';
 import sourcemaps from 'gulp-sourcemaps';
 import eslint from 'gulp-eslint';
+import jest from'gulp-jest';
 
 const browserSync = BrowserSync.create();
 
@@ -91,4 +92,15 @@ gulp.task('lint:js', () => {
     }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
+});
+
+gulp.task('jest', function () {
+  return gulp.src('core').pipe(jest({
+    config: {
+      "transformIgnorePatterns": [
+        "<rootDir>/dist/", "<rootDir>/node_modules/"
+      ],
+      "automock": false
+    }
+  }));
 });
