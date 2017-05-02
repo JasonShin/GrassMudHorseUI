@@ -1,24 +1,26 @@
 mui-input {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
   color: #34495e;
-  padding: 10px 19px;
-  font-size: 17px;
-  line-height: 1.471;
-  border-radius: 6px;
 }
 
-mui-input[data-type="inactive"] {
+mui-input[data-type="inactive"] input {
   border: 2px solid #bdc3c7;
 }
 
-mui-input[data-type="success"] {
+mui-input[data-type="success"] input {
   border: 2px solid #2ecc71;
 }
 
 mui-input input {
-  border: 0;
+  padding: 10px 19px;
+  font-size: 17px;
+  line-height: 1.471;
+  border-radius: 6px;
   box-shadow: none;
 }
 
-mui-input input {
-  padding: 20px;
+mui-input input:focus {
+  outline: none;
 }
