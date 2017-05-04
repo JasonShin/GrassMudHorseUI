@@ -1,3 +1,5 @@
+@import 'variables';
+
 mui-input {
   display: flex;
   flex-direction: row;
@@ -12,26 +14,26 @@ mui-input input {
   line-height: 1.471;
   border-radius: 6px;
   box-shadow: none;
-  transition: 250ms ease-in-out-cubic;
+  transition: $animation_main;
 }
 
 /**
  * Placeholder colouring
  */
 mui-input input::placeholder {
-  color: #bdc3c7;
+  color: $gray;
 }
 
 mui-input[data-type="inactive"] input {
-  border: 3px solid #bdc3c7;
+  border: 3px solid $gray;
 }
 
 mui-input[data-type="inactive"] input:focus {
-  border: 3px solid #2ecc71;
+  border: 3px solid $green;
 }
 
 mui-input[data-type="success"] input {
-  border: 3px solid #2ecc71;
+  border: 3px solid $green;
 }
 
 // General style disabling

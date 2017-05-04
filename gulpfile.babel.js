@@ -97,10 +97,10 @@ gulp.task('lint:js', () => {
 gulp.task('jest', function () {
   return gulp.src('core').pipe(jest({
     config: {
-      "transformIgnorePatterns": [
-        "<rootDir>/dist/", "<rootDir>/node_modules/"
+      'transformIgnorePatterns': [
+        '<rootDir>/dist/', '<rootDir>/node_modules/'
       ],
-      "automock": false
+      'automock': false
     }
   }));
 });

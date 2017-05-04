@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development gulp serve",
     "lint:js": "cross-env NODE_ENV=development gulp lint:js",
+    "lint:scss": "cross-env NODE_ENV=development stylelint \"./core/css/**/*.scss\" --syntax scss",
+    "fix:scss": "stylefmt -d --recursive \"./core/**/*.scss\"",
     "test": "cross-env NODE_ENV=test gulp jest"
   },
   "author": "Jason Shin <visualbbasic@gmail.com>",
@@ -48,7 +50,10 @@
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "rucksack-css": "^0.9.1"
+    "rucksack-css": "^0.9.1",
+    "stylefmt": "^5.3.2",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0"
   },
   "dependencies": {
     "gulp-jest": "^1.0.0",

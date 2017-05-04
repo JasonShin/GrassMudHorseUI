@@ -17,5 +17,6 @@ install:
   - NODE_ENV=development yarn install
 
 script:
-  - gulp lint:js
+  - yarn lint:js
+  - yarn lint:scss
   - NODE_ENV=test gulp jest
