@@ -12,9 +12,6 @@ class Switch extends Base {
     `;
     this.appendChild(container);
   }
-  get label () {
-    return this._label;
-  }
 }
 
 window.customElements.define('mui-switch', Switch);
